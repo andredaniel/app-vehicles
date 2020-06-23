@@ -1,0 +1,30 @@
+<mat-card>
+  <ng-template [ngIf]="vehicles" [ngIfElse]="loading">
+    <mat-nav-list>
+      <a
+        *ngFor="let vehicle of vehicles"
+        class="list-item"
+        mat-list-item
+        routerLink="/vehicle/{{ vehicle.id }}"
+      >
+        {{ vehicle.marca }} {{ vehicle.modelo }} {{ vehicle.ano }}
+        <span class="placa">{{ vehicle.placa }}</span>
+      </a>
+    </mat-nav-list>
+  </ng-template>
+
+  <ng-template #loading>
+    <mat-spinner diameter="30" style="margin: 0 auto;"></mat-spinner>
+  </ng-template>
+
+  <ng-template [ngIf]="vehicles && vehicles.length === 0">
+    <div class="empty-list-wrapper">
+      <img
+        src="assets/images/undraw_town.svg"
+        class="empty-list-image"
+        alt="Empty list"
+      />
+      <h2>Ainda não tem nada por aqui...</h2>
+    </div>
+  </ng-template>
+</mat-card>

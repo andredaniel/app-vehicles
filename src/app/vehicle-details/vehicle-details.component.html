@@ -1,0 +1,20 @@
+<mat-card>
+  <ng-template [ngIf]="vehicle" [ngIfElse]="loading">
+    <mat-card-title>{{ vehicle.marca }} {{ vehicle.modelo }}</mat-card-title>
+    <mat-card-subtitle>{{ vehicle.ano }}</mat-card-subtitle>
+    <mat-card-content>
+      <p><strong>Placa:</strong> {{ vehicle.placa }}</p>
+      <p><strong>Chassi:</strong> {{ vehicle.chassi }}</p>
+      <p><strong>Renavam:</strong> {{ vehicle.renavam }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="warn" (click)="deleteVehicleConfirmation()">
+        EXCLUIR
+      </button>
+    </mat-card-actions>
+  </ng-template>
+
+  <ng-template #loading>
+    <mat-spinner diameter="30" style="margin: 0 auto;"></mat-spinner>
+  </ng-template>
+</mat-card>

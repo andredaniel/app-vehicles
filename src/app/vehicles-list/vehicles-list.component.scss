@@ -1,0 +1,44 @@
+.mat-nav-list .mat-list-item.list-item {
+  height: 60px;
+}
+
+.placa {
+  background-color: #eee;
+  border-radius: 5px;
+  border: 2px solid #000;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-left: auto;
+  padding: 17px 20px 2px;
+  position: relative;
+  text-align: center;
+
+  &:before {
+    background-color: #013399;
+    color: #fff;
+    content: "BRASIL";
+    font-size: 0.5em;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 2px;
+    padding: 2px 0;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.empty-list-wrapper {
+  text-align: center;
+  padding: 50px 0;
+
+  .empty-list-image {
+    max-width: 300px;
+  }
+
+  h2 {
+    font-weight: 100;
+  }
+}

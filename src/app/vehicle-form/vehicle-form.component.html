@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-content>
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>Placa</mat-label>
+      <input matInput [(ngModel)]="placa" />
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>Chassi</mat-label>
+      <input matInput [(ngModel)]="chassi" />
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>RENAVAM</mat-label>
+      <input matInput [(ngModel)]="renavam" />
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>Modelo</mat-label>
+      <input matInput [(ngModel)]="modelo" />
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>Marca</mat-label>
+      <input matInput [(ngModel)]="marca" />
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>Ano</mat-label>
+      <input matInput [(ngModel)]="ano" />
+    </mat-form-field>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="registerVehicle()">
+      Registrar veículo
+    </button>
+  </mat-card-actions>
+</mat-card>

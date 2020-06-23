@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>{{ data.marca }} {{ data.modelo }} {{ data.ano }}</h1>
+<div mat-dialog-content>
+  <p>Deseja mesmo excluir este veículo?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Não, obrigado</button>
+  <button
+    [mat-dialog-close]="data.id"
+    cdkFocusInitial
+    color="warn"
+    mat-raised-button
+  >
+    Sim, excluir
+  </button>
+</div>
